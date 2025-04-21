@@ -1,0 +1,129 @@
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-1 ul,
+.menu-2 ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+    color: #db241b;
+}
+
+.logo-1 {
+    display: none;
+}
+
+.logo-2 {
+    width: 150px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.social {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #db241b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social:hover {
+    background-color: #db241b;
+}
+
+.social img {
+    width: 20px;
+    height: 20px;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: none;
+    transition: transform 0.3s;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+  
+}
+  
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.btn-custom {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+    transition: 0.3s;
+}
+  
+.btn-custom:hover {
+    background-color: red;
+    color: white;
+}

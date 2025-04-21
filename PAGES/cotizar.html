@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización Vehículos</title>
+  <link rel="stylesheet" href="/CSS/cotizar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu container">
+            <img src="/IMG/Redes sociales/Logo.png" alt="" class="logo-1">
+            <input type="checkbox" id="menu">
+            
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/PAGES/catalogo.html">Catálogo</a></li>
+                        <li><a href="/PAGES/reseñas.html">Comentarios y reseñas</a></li>
+                    </ul>
+                </div>
+                <img src="/IMG/Redes sociales/Logo.png" alt="" class="logo-2">
+    
+                <div class="menu-2">
+                    <div class="socials">
+                        <a href="#">
+                            <div class="social">
+                                <img src="/IMG/Redes sociales/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="/IMG/Redes sociales/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="/IMG/Redes sociales/s3.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+
+  <form id="cotizacionForm" class="form">
+    <label for="marca">Marca:</label>
+    <select id="marca">
+      <option value="" disabled selected>Selecciona una marca</option>
+      <option value="tesla">Tesla</option>
+      <option value="byd">BYD</option>
+      <option value="ferrari">Ferrari</option>
+      <option value="mercedes">Mercedes</option>
+    </select>
+
+    <div id="modelo-container" style="display:none;">
+      <label for="modelo">Modelo:</label>
+      <select id="modelo"></select>
+      <p id="precio-por-dia"></p>
+    </div>
+
+    <label for="inicio">Fecha inicio:</label>
+    <input type="date" id="inicio" required>
+
+    <label for="fin">Fecha fin:</label>
+    <input type="date" id="fin" required>
+
+    <label><input type="checkbox" id="seguro"> Seguro (+$20,000 COP)</label><br>
+    <label><input type="checkbox" id="conductor"> Conductor (+$15,000 COP)</label><br>
+
+    <button type="submit">Calcular cotización</button>
+  </form>
+
+  <div id="resultadoCotizacion"></div>
+
+  <script src="/JS/cotizacion.js" defer></script>
+</body>
+</html>
