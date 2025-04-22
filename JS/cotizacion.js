@@ -66,8 +66,15 @@ const modelosPorMarca = {
     if (document.getElementById("conductor").checked) totalCOP += 30000;
   
     try {
-      const res = await fetch("https://api.exchangerate.host/latest?base=COP&symbols=USD");
+
+      const from = 'COP';
+      const to = 'USD';
+      const amount = totalCOP;
+      const accessKey = '2f7d7155c32f567af88c9fa99bb0c52c';
+
+      const res = await fetch(`https://api.exchangerate.host/convert?access_key=${accessKey}&from=${from}&to=${to}&amount=${amount}`);
       const data = await res.json();
+      console.log(data);
       const tasa = data.rates.USD;
       const totalUSD = (totalCOP * tasa).toFixed(2);
   
